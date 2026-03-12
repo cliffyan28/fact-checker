@@ -4,16 +4,20 @@ description: "Fact-check news articles, social media posts, images, and videos.
   Use when verifying claims, detecting deepfakes or AI-generated content,
   identifying out-of-context media, or debunking misinformation. Any language."
 version: 1.0.0
+homepage: https://github.com/cliffyan28/fact-checker
 metadata:
-  openclaw:
+  clawdbot:
     emoji: "\u2705"
     requires:
-      anyBins:
+      optionalEnv:
+        - GOOGLE_FACTCHECK_API_KEY
+        - BRAVE_SEARCH_API_KEY
+        - OPENAI_API_KEY
+      optionalBins:
         - ffmpeg
         - exiftool
         - c2patool
-    primaryEnv: GOOGLE_FACTCHECK_API_KEY
-    homepage: https://github.com/cliffyan28/fact-checker
+        - whisper
 ---
 
 # Fact-Check: Multimodal News Verification Skill
